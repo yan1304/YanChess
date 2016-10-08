@@ -1,0 +1,33 @@
+﻿<Application x:Class="YanChess.UserInterface.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:YanChess.UserInterface.UserControls"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ControlTemplate TargetType="Button" x:Key="sbTemplate">
+            <Border CornerRadius="15"
+                    BorderBrush="{TemplateBinding BorderBrush}">
+                <Border.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#FFAC8725" Offset="1"/>
+                        <GradientStop Color="#FFE2B131" Offset="0.481"/>
+                    </RadialGradientBrush>
+                </Border.Background>
+                <ContentControl  HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Content="{TemplateBinding Content}"
+                                FontFamily="Arial"
+                                FontSize="{TemplateBinding FontSize}" Foreground="#FF6E653E"
+                                />
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate TargetType="Button" x:Key="chbTemplate">
+            <Border Background="{TemplateBinding Background}">
+                <ContentControl  HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Content="{TemplateBinding Content}"
+                                FontFamily="Arial"
+                                FontSize="30" Foreground="#FF6E653E"
+                                />
+            </Border>
+        </ControlTemplate>
+    </Application.Resources>
+</Application>

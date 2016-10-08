@@ -1,0 +1,16 @@
+﻿<Window x:Class="YanChess.UserInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YanChess.UserInterface"
+        mc:Ignorable="d"
+        Title="Шахматы" MaxHeight="380" Width="525" MaxWidth="525" MinHeight="380" MinWidth="525" Background="#FFD3C275" >
+    <StackPanel>
+        <Button x:Name="buttonStart" FontSize="30" Template="{StaticResource sbTemplate}" Content="Новая игра" Margin="20 20 20 0" MinHeight="50" MinWidth="100" Click="buttonStart_Click" />
+        <Button x:Name="buttonInsertPosition"  FontSize="30" Template="{StaticResource sbTemplate}" Content="Ввести позицию" Margin="20 20 20 0" MinHeight="50" MinWidth="100" Click="buttonInsertPosition_Click" />
+        <Button x:Name="buttonOption"  FontSize="30" Template="{StaticResource sbTemplate}" Content="Настройки" Margin="20 20 20 0" MinHeight="50" MinWidth="100" Click="buttonOption_Click" />
+        <Button x:Name="buttonExit"  FontSize="30" Template="{StaticResource sbTemplate}" Content="Выход" Margin="20 20 20 0" MinHeight="50" MinWidth="100" Click="buttonExit_Click" />
+        <TextBlock Text="Автор: Ян Евтушенко" Margin="0 40 10 0" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+    </StackPanel>
+</Window>

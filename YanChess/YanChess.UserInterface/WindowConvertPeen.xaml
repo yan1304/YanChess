@@ -1,0 +1,21 @@
+﻿<Window x:Class="YanChess.UserInterface.WindowConvertPeen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YanChess.UserInterface"
+        mc:Ignorable="d"
+        Title="Выбор фигуры" Height="100" Width="400">
+    <Grid ShowGridLines="True" Background="#FFE7EAB4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Q" Grid.Column="0" Click="K_Click" Template="{StaticResource chbTemplate}"/>
+        <Button x:Name="R" Grid.Column="1" Click="K_Click" Template="{StaticResource chbTemplate}"/>
+        <Button x:Name="B" Grid.Column="2" Click="K_Click" Template="{StaticResource chbTemplate}"/>
+        <Button x:Name="N" Grid.Column="3" Click="K_Click" Template="{StaticResource chbTemplate}"/>
+    </Grid>
+</Window>

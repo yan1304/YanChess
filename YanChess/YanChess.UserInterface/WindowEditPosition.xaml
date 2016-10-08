@@ -1,0 +1,79 @@
+﻿<Window x:Class="YanChess.UserInterface.Windows.WindowEditPosition"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YanChess.UserInterface"
+        mc:Ignorable="d"
+        Title="Редактирование позиции" MinHeight="550" MinWidth="850"  Height="500" Width="750" MaxHeight="1000" MaxWidth="1500">
+    <Grid>
+        <DockPanel>
+            <Menu x:Name="menu" DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Back to main window" Click="MenuItem_Click"/>
+                    <Separator />
+                    <MenuItem Header="Exit" Click="MenuItem_Click"/>
+                </MenuItem>
+                <MenuItem Header="View">
+                    <MenuItem Header="Flip board" Click="MenuItem_Click"/>
+                </MenuItem>
+                <MenuItem Header="Option" Click="MenuItem_Click"/>
+            </Menu>
+            <StatusBar x:Name="statusBar" DockPanel.Dock="Bottom" Height="20" VerticalAlignment="Bottom">
+                <TextBlock x:Name="statusBarText" Text="Status bar"/>
+            </StatusBar>
+            <Grid Background="#FFF7D536" SizeChanged="Grid_SizeChanged">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0.4*"/>
+                </Grid.RowDefinitions>
+                <local:ChessBoard Grid.Column="0" Grid.RowSpan="2" x:Name="chessBoard">
+
+                </local:ChessBoard>
+                <StackPanel Grid.Column="1" Grid.Row="1" Background="#FFF0AF52">
+                    <Button x:Name="startPosButton" Margin="20 15 20 0"  FontSize="20" Template="{StaticResource sbTemplate}" Click="startPosButton_Click">Стартовая позиция</Button>
+                    <Button x:Name="clrButton" Margin="20 10 20 0"  FontSize="20" Template="{StaticResource sbTemplate}" Click="clrButton_Click">Очистить позицию</Button>
+                    <Button x:Name="startButton" Margin="20 10 20 0"  FontSize="20" Template="{StaticResource sbTemplate}" Click="startButton_Click">Начать игру</Button>
+                    <Button x:Name="backButton" Margin="20 10 20 0"  FontSize="20" Template="{StaticResource sbTemplate}" Click="backButton_Click">В меню</Button>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Grid.Row="0">
+                    <Grid x:Name="gridButtons" Margin="10" Background="Beige" MinHeight="90">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <Button x:Name="ButtonMove"  FontSize="22" Margin="25 0 25 0" Template="{StaticResource sbTemplate}" 
+                            Content="Переместить" Background="#FFE0A044" Click="ButtonMove_Click" BorderBrush="Black"
+                            ToolTip="Переместить фигуру"/>
+                    <Button x:Name="ButtonClear"  FontSize="22" Margin="25 10 25 0" Template="{StaticResource sbTemplate}" 
+                            Content="Очистить" Background="#FFE0A044" Click="ButtonClear_Click" BorderBrush="Black"
+                            ToolTip="Очистить клетку"/>
+                    <GroupBox Name="groupMoves" Header="Возможные рокировки" FontSize="16" Margin="10" Background="#FFF0EABA" BorderBrush="#FF614825" Foreground="Black">
+                        <StackPanel>
+                            <TextBlock Text="Белые:" Margin="10 5 0 0"/>
+                            <CheckBox Name="isLeftW" Content="0 - 0 - 0" Margin="10 5 0 0" IsChecked="True" Background="#FFFFC341"/>
+                            <CheckBox Name="isRightW" Content="0 - 0" Margin="10 10 0 0" IsChecked="True" Background="#FFFFC341"/>
+                            <TextBlock Text="Черные:" Margin="10 5 0 0"/>
+                            <CheckBox Name="isLeftB" Content="0 - 0 - 0" Margin="10 10 0 0" IsChecked="True" Background="#FFFFC341"/>
+                            <CheckBox Name="isRightB" Content="0 - 0" Margin="10 10 0 0" IsChecked="True" Background="#FFFFC341"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <CheckBox Name="isWhiteMove" Content="Ход белых" IsChecked="True" Margin="10" Background="#FFFFC341"/>
+                </StackPanel>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="YanChess.GameLogic.Figure">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAABAAAAAAAAIAAAQAAgAAAAiA=</HashCode>
+      <FileName>AbstractClass\Figure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.Peen">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Class\Figures\Peen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.Bishop">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Figures\Bishop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.Rock">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Figures\Rock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.King">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Figures\King.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.Queen">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Figures\Queen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.Knight">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Figures\Knight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.NotFigur">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Figures\NotFigur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.Position">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAIBAACIIAAAAAgABAAAAAAAAIBICABAIAACAAAAA=</HashCode>
+      <FileName>Class\Position\Position.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="YanChess.GameLogic.Square">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAgAAAAAAEAAAAEIAAAAAAAAAAAjA=</HashCode>
+      <FileName>Class\Position\Square.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Figure" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="YanChess.GameLogic.MoveCoord">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAggBAkAAAgEEAAAAKBAAAAQAABA=</HashCode>
+      <FileName>Class\MoveCoord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="YanChess.GameLogic.GameLogic">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACggGAACADBoAAAUAIRABBAgAgAIAFCIQAAAAAAA=</HashCode>
+      <FileName>Class\GameLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="YanChess.GameLogic.IPosition">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAIBAAAAAIAACAAAAA=</HashCode>
+      <FileName>Interfaces\IPosition.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="YanChess.GameLogic.ColorFigur">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Enums\ColorFigur.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="YanChess.GameLogic.TypeFigur">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAKAAAAAAAAABJAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enums\TypeFigur.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
