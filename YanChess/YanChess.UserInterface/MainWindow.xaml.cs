@@ -17,7 +17,7 @@ namespace YanChess.UserInterface
         public MainWindow()
         {
             InitializeComponent();
-            EngineOptions.MaxDepth = 4;
+            EngineOptions.MaxDepth = 99;
             EngineOptions.IsMultithread = true;
             EngineOptions.IsUseEasyScoreOfPosition = false;
             EngineOptions.IsUsePositionDictionary = true;
