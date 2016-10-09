@@ -1258,7 +1258,7 @@ namespace YanChess.Engine
                     ParallelOptions po = new ParallelOptions();
                     po.CancellationToken = cts.Token;
                     po.MaxDegreeOfParallelism = System.Environment.ProcessorCount;
-                    Parallel.ForEach(myL, po, (mc) =>
+                    Parallel.ForEach(myL, po, (mc,pls) =>
                     {
                         // Копируем позицию, чтобы избежать изменений
                         var p1 = (Position)p.DeepCopy();
@@ -1276,6 +1276,7 @@ namespace YanChess.Engine
                             moveMutex.WaitOne();
                             valPerMoves.Add(new Move((int)score, mc));
                             moveMutex.ReleaseMutex();
+                            if (p.IsWhiteMove && score > 100000 || !p.IsWhiteMove && (int)score < -100000) pls.Break();
                         }
                     });
                     #endregion
