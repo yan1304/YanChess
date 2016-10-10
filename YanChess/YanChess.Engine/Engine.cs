@@ -1268,15 +1268,16 @@ namespace YanChess.Engine
                         {
                             p1.Board[mc.xEnd, mc.yEnd] = new Square(new Queen(p1.Board[mc.xEnd, mc.yEnd].Figure.Color));
                         }
+                        int? score = null;
                         // вычисляем вес хода 
-                        int? score = SearchInDepth(p1, depth, thisDepth + 1);
+                        if (!pls.IsStopped) score = SearchInDepth(p1, depth, thisDepth + 1);
                         // Добавляем ход и его вес в список ходов
-                        if (score != null)
+                        if (score != null && !pls.IsStopped)
                         {
                             moveMutex.WaitOne();
                             valPerMoves.Add(new Move((int)score, mc));
                             moveMutex.ReleaseMutex();
-                            if (p.IsWhiteMove && score > 100000 || !p.IsWhiteMove && (int)score < -100000) pls.Break();
+                            if (p.IsWhiteMove && score > 100000 || !p.IsWhiteMove && (int)score < -100000||IsStopSearch) pls.Stop();
                         }
                     });
                     #endregion
