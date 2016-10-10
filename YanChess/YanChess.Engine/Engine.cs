@@ -1304,7 +1304,6 @@ namespace YanChess.Engine
                     }
                     #endregion
                 }
-
                 // В случае генерации прерывания поиска и наличии записи ходов в основном списке,
                 // Заменяем все ходы, которые успели рассчитать
                 if (IsStopSearch && MovesWithScore != null)
@@ -1601,7 +1600,7 @@ namespace YanChess.Engine
                 Position p1 = (Position)p.DeepCopy();
                 if (MovesWithScore.Count != 0)
                 {
-                    score = SearchInDepth(p1, thisDepth);
+                    score = SearchInDepth(p1, thisDepth,0,MovesWithScore);
                 }
                 else
                 {
